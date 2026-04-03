@@ -134,3 +134,10 @@ After 5 rounds of testing, LogisticRegression was chosen to proceed for further 
 - n_fft: 2048 (No change)
 
 - hop_length: 512 (No change)
+
+### Machine Learning Model
+
+#### Version 1
+- max_iter: 2000
+
+- class_weight: "balanced"
