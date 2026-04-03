@@ -1,4 +1,4 @@
-# dsp_project_audio_classification
+# CEG3003 Project: Environmental Sound Classification using Machine Learning
 
 ## Methodology
 Upon inspecting the spectrograms of the original training datasets and given the wide range of audio classication groups, it is apparent that no specific frequency range to adjust for. As such the signal processing will attempt to pick out only significant decibels on any frequencies, and reject low decibel frequencies as noise.
