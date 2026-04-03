@@ -79,6 +79,11 @@ This paramater configures the overlap between adjacent frames, used in conjuctio
 
 - A lower value results in larger overlaps which could result in a overly correlated adjacent frames
 
+## Model Selection
+There were 4 models tested; LogisticRegression, SVC, HistGradientBoostingClassfier, and MLPClassifier. Each model was tested with the different versions of preprocessing and feature extraction to see which model could achieve the highest accuracy.
+
+After 5 rounds of testing, LogisticRegression was chosen to proceed for further fine-tuning as it had achieved the overall highest accuracy across all rounds.
+
 ## Version history
 
 ### Preprocessor
