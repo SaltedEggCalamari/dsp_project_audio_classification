@@ -84,6 +84,44 @@ There were 4 models tested; LogisticRegression, SVC, HistGradientBoostingClassfi
 
 After 5 rounds of testing, LogisticRegression was chosen to proceed for further fine-tuning as it had achieved the overall highest accuracy across all rounds.
 
+## Experiments
+A total of 21 rounds of experiments were done. 
+
+To achieve the best results, the logic implemented adhered to the following two rules:
+
+1. Allow audio preprocessing to be aggressive and harsh to eliminate as much noise as possible.
+
+2. Allow feature extraction to be as detailed as possible.
+
+The idea behind these two rules were that feature extraction should be made to gather as much detail as possible without being overly-concerned with noise as noise should be as much as possible, eliminated by preprocessing.
+
+Below is a table that documents the rounds of testing done and the accuracy achieved.
+
+| Test ID | Preprocessing | Feature Extraction | Model | Accuracy |
+|:-------:|:-------------:|:------------------:|:-----:|:--------:|
+| Original | nil | nil | logistic regression | 0.4 |
+| 1 | nil | nil | SVC | 0.45 |
+| 2 | nil | nil | Hist Gradient | 0.45 |
+| 3 | nil | nil | MLP Classifier | 0.44 |
+| 4 | v1 | v1 | logistic regression | 0.47 |
+| 5 | v1 | v1 | SVC | 0.46 |
+| 6 | v1 | v1 | Hist Gradient | 0.38 |
+| 7 | v1 | v1 | MLP Classifier | 0.43 |
+| 8 | v2 | v1 | logistic regression | 0.59 |
+| 9 | v2 | v1 | SVC | 0.47 |
+| 10 | v2 | v1 | Hist Gradient | 0.54 |
+| 11 | v2 | v1 | MLP Classifier | 0.53 |
+| 12 | v2 | v2 | logistic regression | 0.57 |
+| 13 | v2 | v2 | SVC | 0.45 |
+| 14 | v2 | v2 | Hist Gradient | 0.51 |
+| 15 | v2 | v2 | MLP Classifier | 0.54 |
+| 16 | v3 | v2 | logistic regression | 0.64 |
+| 17 | v3 | v2 | SVC | 0.53 |
+| 18 | v3 | v2 | Hist Gradient | 0.58 |
+| 19 | v3 | v2 | MLP Classifier | 0.60 |
+| 20 | v4 | v3 | logistic regression | 0.64 |
+| 21 | v5 | v3 | logistic regression | 0.65 |
+
 ## Version history
 
 ### Preprocessor
@@ -115,6 +153,24 @@ After 5 rounds of testing, LogisticRegression was chosen to proceed for further 
 
 - fixed_duration: 0.5 --> 4.0
 
+#### Version 4
+- top_db: 20 --> 25
+
+- pre_emphasis_coeff: 0.50 (No change)
+
+- target_rms: 0.1 (No change)
+
+- fixed_duration: 4.0 (No change)
+
+#### Version 5
+- top_db: 25 (No change)
+
+- pre_emphasis_coeff: 0.50 (No change)
+
+- target_rms: 0.1 --> 0.15
+
+- fixed_duration: 4.0 --> 3.5
+
 ### Feature Extraction
 
 #### Version 1
@@ -135,9 +191,11 @@ After 5 rounds of testing, LogisticRegression was chosen to proceed for further 
 
 - hop_length: 512 (No change)
 
-### Machine Learning Model
+#### Version 3
+- n_mfcc: 30 --> 40
 
-#### Version 1
-- max_iter: 2000
+- n_mels: 184 --> 255
 
-- class_weight: "balanced"
+- n_fft: 2048 (No change)
+
+- hop_length: 512 (No change)
