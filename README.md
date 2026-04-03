@@ -95,8 +95,21 @@ To achieve the best results, the logic implemented adhered to the following two 
 
 The idea behind these two rules were that feature extraction should be made to gather as much detail as possible without being overly-concerned with noise as noise should be as much as possible, eliminated by preprocessing.
 
-Below is a table that documents the rounds of testing done and the accuracy achieved.
+You may find a table documenting the rounds of testing done and the accuracy achieved in Appendix A.
 
+## Steps to reproduce
+To reproduce the results, 
+
+1. Implement the same preprocessing steps as described in "Preprocessing".
+2. Implement the same feature extraction as described in "Feature Extraction".
+3. Implement the same model as described in model selection
+4. For configurable parameters, adhere to the version history found in Appendix B.
+5. For test parameters, adhere to the experiment parameters in the table found in Appendix A.
+
+Following these guidelines, you should be able to reproduce the results. Refer to source code found in this repository for deeper technical implementations.
+
+# Appendix A
+## Experiment parameters and results
 | Test ID | Preprocessing | Feature Extraction | Model | Accuracy |
 |:-------:|:-------------:|:------------------:|:-----:|:--------:|
 | Original | nil | nil | logistic regression | 0.4 |
@@ -122,17 +135,10 @@ Below is a table that documents the rounds of testing done and the accuracy achi
 | 20 | v4 | v3 | logistic regression | 0.64 |
 | 21 | v5 | v3 | logistic regression | 0.65 |
 
-## Step to reproduce
-To reproduce the results, implement a preprocessing, feature extraction function using the steps as written above along with the logistic regression model for machine learning. 
 
-For the configurable parameters, the version history is written below.
-
-Follow the version history in accordance with the testing table and the result should be reproduced.
-
+# Appendix B
 ## Version history
-
 ### Preprocessor
-
 #### Version 1
 - top_db: 20
 
@@ -206,3 +212,26 @@ Follow the version history in accordance with the testing table and the result s
 - n_fft: 2048 (No change)
 
 - hop_length: 512 (No change)
+
+### Model Implementation
+#### Logistic Regression
+- max_iter: 2000
+- class weight: 'balanced'
+
+#### SVC
+- kernal: rbf
+- C: 1.0
+- gamma: 'scale'
+- class weight: 'balanced'
+- probability: True
+
+#### HistGradientBoostingClassifier
+- max_iter: 100
+- random_state: 42
+- class weight: 'balanced'
+
+#### MLPClassifier
+- hidden_layer_sizes: (128, 64)
+- activation: 'relu'
+- max_iter: 500
+- random_state: 42
