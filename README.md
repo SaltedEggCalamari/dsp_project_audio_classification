@@ -51,11 +51,11 @@ This parameter configures the duration of the audio. This value is measure in se
 
 
 
-# Version history
+## Version history
 
-## Preprocessor
+### Preprocessor
 
-### Version 1
+#### Version 1
 - top_db: 20
 
 - pre_emphasis_coeff: 0.97
@@ -64,7 +64,7 @@ This parameter configures the duration of the audio. This value is measure in se
 
 - fixed_duration: 0.5
 
-### Version 2
+#### Version 2
 - top_db: 20 --> 10
 
 - pre_emphasis_coeff: 0.97 --> 0.50
@@ -73,7 +73,7 @@ This parameter configures the duration of the audio. This value is measure in se
 
 - fixed_duration: 0.5 --> 2.5
 
-### Version 3
+#### Version 3
 - top_db: 10 --> 20
 
 - pre_emphasis_coeff: 0.50 (No change)
@@ -82,9 +82,9 @@ This parameter configures the duration of the audio. This value is measure in se
 
 - fixed_duration: 0.5 --> 4.0
 
-## Feature Extraction
+### Feature Extraction
 
-### Version 1
+#### Version 1
 - n_mfcc: 20
 
 - n_mels: 128
@@ -93,7 +93,7 @@ This parameter configures the duration of the audio. This value is measure in se
 
 - hop_length: 512
 
-### Version 2
+#### Version 2
 - n_mfcc: 20 --> 30
 
 - n_mels: 128 --> 184
