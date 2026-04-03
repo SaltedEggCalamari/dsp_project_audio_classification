@@ -21,19 +21,19 @@ This parameter configures the threshold for whether an audio value should be tri
 Higher values result in more aggressive trimming which is more resistant to softer noise features but could cause softer key features to be lost
 Lower values allow for softer key features to be retained but may permit noise to persist
 
-###pre_emphasis_coeff
+### pre_emphasis_coeff
 This parameter configures the amplification of frequencies. This value is adjusted between 0 and 1.
 
 A higher value amplifies higher frequencies and reduces lower frequencies.
 A lower value amplifies lower frequencies and reduces higher frequencies.
 
-###target_rms
+### target_rms
 The parameter configures the target "loudness" of the audio. The typical range is between 0.1 and 2.
 
 A higher value boosts the loudness of the audio, an amplification that benefits feature extraction. However, boosting the audio too much could result in clipping if the peak value exceeds the valid range.
 A lower value quietens the audio and could negatively affect the feature extraction.
 
-###fixed_duration
+### fixed_duration
 This parameter configures the duration of the audio. This value is measure in seconds.
 
 A higher value increases the likelihood that key features do not get truncated which occurs during a reduction (e.g. 3s -> 2s) but increases the processing and computation time
