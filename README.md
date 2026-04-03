@@ -122,6 +122,13 @@ Below is a table that documents the rounds of testing done and the accuracy achi
 | 20 | v4 | v3 | logistic regression | 0.64 |
 | 21 | v5 | v3 | logistic regression | 0.65 |
 
+## Step to reproduce
+To reproduce the results, implement a preprocessing, feature extraction function using the steps as written above along with the logistic regression model for machine learning. 
+
+For the configurable parameters, the version history is written below.
+
+Follow the version history in accordance with the testing table and the result should be reproduced.
+
 ## Version history
 
 ### Preprocessor
