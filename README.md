@@ -47,9 +47,37 @@ This parameter configures the duration of the audio. This value is measure in se
 - A lower value increases the speed by reducing computation time but increases the possibility that key features become truncated.
 
 ## Feature Extraction
+Features are extracted by the four groups as annotated in the source code: MFCC + Deltas,  Log-Mel Spectrogram, Spectral Features, and Chroma. Each feature is passed through the compute_stats() function which extracts the statistics for each feature. 
 
+There are four configurable parameters: *n_mfcc, n_mels, n_fft, hop_length*
 
+### n_mfcc
+This parameter configures the number of Mel-Frequency Cepstral Coefficients are computed per frame.
 
+- A higher value means more coefficients per frame which translates to a higher-dimensional feature matrix. This can potentially capture finer spectral details but risks overfitting
+
+- A lower value provides faster processing but may miss subtle details 
+
+### n_mels
+This parameter configures the number of Mel-Spaced frequency bands are used to create the Mel spectrogram.
+
+- A higher value creates a higher resolution Mel spectrogram which captures more details but potentially captures more noise
+
+- A lower value lowers the resolution of the Mel spectrogram which improves its resistance to noise at the cost of losing the finer details
+
+### n_fft
+This parameter configures the number of samples used for each Short-Time Fourier Transform frame.
+
+- A higher value captures longer frequency details better (such as a vacuum cleaner where a high frequency feature is present throughout the audio)
+
+- A lower value captures shorter frequecy details better (Such as a dog barking where the frequency features is present for short bursts)
+
+### hop_length
+This paramater configures the overlap between adjacent frames, used in conjuction with n_fft.
+
+- A higher value results in a smaller overlap which translates to fewer total frames for a given audio.
+
+- A lower value results in larger overlaps which could result in a overly correlated adjacent frames
 
 ## Version history
 
