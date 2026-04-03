@@ -47,3 +47,39 @@ This parameter configures the duration of the audio. This value is measure in se
 - A lower value increases the speed by reducing computation time but increases the possibility that key features become truncated.
 
 ## Feature Extraction
+
+
+
+
+# Version history
+
+## Preprocessor
+
+### Version 1
+top_db: 20
+
+pre_emphasis_coeff: 0.97
+
+target_rms: 0.1
+
+fixed_duration: 0.5
+
+### Version 2
+top_db: 20 -> 10
+
+pre_emphasis_coeff: 0.97 -> 0.50
+
+target_rms: 0.1 (No change)
+
+fixed_duration: 0.5 -> 2.5
+
+### Version 2
+top_db: 10 -> 20
+
+pre_emphasis_coeff: 0.50 (No change)
+
+target_rms: 0.1 (No change)
+
+fixed_duration: 0.5 -> 4.0
+
+## Feature Extraction
