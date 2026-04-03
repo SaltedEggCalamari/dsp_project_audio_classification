@@ -83,3 +83,21 @@ This parameter configures the duration of the audio. This value is measure in se
 - fixed_duration: 0.5 --> 4.0
 
 ## Feature Extraction
+
+### Version 1
+- n_mfcc: 20
+
+- n_mels: 128
+
+- n_fft: 2048
+
+- hop_length: 512
+
+### Version 2
+- n_mfcc: 20 --> 30
+
+- n_mels: 128 --> 184
+
+- n_fft: 2048
+
+- hop_length: 512
