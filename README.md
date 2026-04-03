@@ -16,7 +16,7 @@ The preprocessing is done in 4 steps.
 
 - Step 4: Fixed-length padding/truncation. This step processes the audio length to a uniformed length as the prior steps may have trimmed off the duration of the audio file
 
-For these 4 steps in preprocessing, there are 4 configurable parameters: top_db, pre_emphasis_coeff, target_rms, and fixed_duration.
+For these 4 steps in preprocessing, there are 4 configurable parameters: *top_db, pre_emphasis_coeff, target_rms, and fixed_duration*.
 
 ### top_db
 This parameter configures the threshold for whether an audio value should be trimmed. This value is measure in dB.
