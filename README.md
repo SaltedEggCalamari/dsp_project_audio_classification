@@ -65,21 +65,21 @@ target_rms: 0.1
 fixed_duration: 0.5
 
 ### Version 2
-top_db: 20 -> 10
+top_db: 20 --> 10
 
-pre_emphasis_coeff: 0.97 -> 0.50
+pre_emphasis_coeff: 0.97 --> 0.50
 
 target_rms: 0.1 (No change)
 
-fixed_duration: 0.5 -> 2.5
+fixed_duration: 0.5 --> 2.5
 
-### Version 2
-top_db: 10 -> 20
+### Version 3
+top_db: 10 --> 20
 
 pre_emphasis_coeff: 0.50 (No change)
 
 target_rms: 0.1 (No change)
 
-fixed_duration: 0.5 -> 4.0
+fixed_duration: 0.5 --> 4.0
 
 ## Feature Extraction
