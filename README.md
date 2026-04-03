@@ -98,6 +98,6 @@ This parameter configures the duration of the audio. This value is measure in se
 
 - n_mels: 128 --> 184
 
-- n_fft: 2048
+- n_fft: 2048 (No change)
 
-- hop_length: 512
+- hop_length: 512 (No change)
