@@ -9,8 +9,11 @@ One case example that exemplifies this judgement is by comparing the spectrogram
 The preprocessing is done in 4 steps.
 
 Step 1: Trimming low amplitude values. This step removes values considered insignificant based on amplitude and achieves the removal of leading and trailing silences along with any small amplitude sounds in the main audio
+
 Step 2: Pre-emphasis filter. This filter is applied to emphasise the higher amplitudes, making it more apparent for further processing down the pipeline
+
 Step 3: RMS normalization. After the emphasising from the previous step, the entire audio is normalized to create a uniform amplitude level
+
 Step 4: Fixed-length padding/truncation. This step processes the audio length to a uniformed length as the prior steps may have trimmed off the duration of the audio file
 
 For these 4 steps in preprocessing, there are 4 configurable parameters: top_db, pre_emphasis_coeff, target_rms, and fixed_duration.
